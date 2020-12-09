@@ -3,7 +3,7 @@
     <transition>
       <div v-show="desktop_status">
         <el-col :span="24">
-          <div class="date_time">{{ date }}</div>
+          <div class="date_time" @click="handleOpen('date')">{{ date }}</div>
         </el-col>
         <el-col :span="24" style="margin-top: 80px;">
           <div style="width: 600px;margin: 0 auto;">
@@ -52,6 +52,7 @@ export default {
       // 首页背景
       background: '',
       url_list: {
+        'date': '/info/calendar',
         'testCase' : '/testCase/index',
       },
     }
@@ -122,9 +123,10 @@ export default {
   animation-iteration-count: 1;
   animation-delay: 0s;
 }
-// .date_time:hover {
-//   font-size: 42px;
-// }
+.date_time:hover {
+  font-size: 42px;
+  cursor: pointer;
+}
 
 .el-dialog__wrapper ::v-deep .el-dialog {
   background:rgba(124, 121, 121, 0.315);
