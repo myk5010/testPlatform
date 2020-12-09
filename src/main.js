@@ -6,7 +6,7 @@ Vue.config.productionTip = false
 // 路由 --->
 import router from "@/router"
 // - 拦截器
-// import "@/router/router_intercept.js"
+import "@/router/router_intercept.js"
 // <--- end
 
 

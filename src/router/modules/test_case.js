@@ -6,7 +6,7 @@ export default [
       {
         path: "index",
         components: require("@/views/test_case/index"),
-        meta: { title: "测试用例" }
+        meta: { title: "测试用例列表" }
       },
     ]
   }
