@@ -2,14 +2,14 @@
   <el-row :style="`background: url('${background}') no-repeat fixed center;height: 100vh;`">
     <transition>
       <div v-show="desktop_status">
-        <el-col :span="24">
+        <el-col :span="24" style="height: calc(100vh - 140px);">
           <div class="date_time" @click="handleOpen('date')">{{ date }}</div>
         </el-col>
-        <el-col :span="24" style="margin-top: 80px;">
-          <div style="width: 600px;margin: 0 auto;">
-            <div class="application" @click="handleOpen('testCase')"><img :src="require('@/assets/icon/testCase.png')" /><p>测试用例</p></div>
-            <div class="application" @click="handleOpen('testPlan')"><img :src="require('@/assets/icon/testPlan.png')" /><p>测试计划</p></div>
-          </div>
+        <el-col :span="24" style="text-align: center;">
+          <div class="application" @click="handleOpen('testCase')"><img :src="require('@/assets/icon/testCase.png')" /><p>测试用例</p></div>
+          <div class="application" @click="handleOpen('testPlan')"><img :src="require('@/assets/icon/testPlan.png')" /><p>测试计划</p></div>
+          <div class="application" @click="handleOpen('bug')"><img :src="require('@/assets/icon/bug.png')" /><p>BUG反馈</p></div>
+          <div class="application" @click="handleOpen('analysis')"><img :src="require('@/assets/icon/analysis.png')" /><p>数据分析</p></div>
         </el-col>
       </div>
     </transition>
@@ -146,9 +146,10 @@ export default {
   color: #fff;
   border-radius: 10px;
   text-align: center;
-  float: left;
-  margin: 20px;
+  margin: 20px 5px;
   font-size: 12px;
+  display: inline-block;
+  transition: width 0.2s, height 0.2s;
 
   img {
     width: 36px;
@@ -161,5 +162,14 @@ export default {
   // background-color: #ffffff80;
   background-color: #ffffffd2;
   color: #333;
+  margin: 0 10px;
+  width: 100px;
+  height: 100px;
+
+  img {
+    width: 42px;
+    height: 42px;
+    margin-top: 18px;
+  }
 }
 </style>
